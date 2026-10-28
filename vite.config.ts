@@ -4,4 +4,7 @@ import { defineConfig } from 'vite'
 export default defineConfig(({ command }) => ({
   plugins: [react()],
   base: command === 'build' ? '/MonPortfolio/' : '/',
+  server: {
+    allowedHosts: ['.monkeycode-ai.live'],
+  },
 }))
